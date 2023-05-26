@@ -1,0 +1,234 @@
+Python Indentation
+    Very important --> used to indicate a block of code.
+    Ex.:    if 5>2:
+                print("Five is greater than two!")
+    You have to use the same number of spaces in the same block of code, otherwise it will generate an error.
+
+Python Variables
+    Containers for storing data values.
+    There is no command for declaring it.
+    It is created the moment you first assign a value to it.
+        Ex.:    x = 5
+                y = "John"
+    Variables do not need to be declared with any particular type and can even change type after they have been set.
+        Ex.:    x = 4       # x is of type int
+                x = "Sally" # x is now of type str
+    Casting:
+        Used to specify the data type of a variable.
+        Ex.:    x = str(3) # x will be '3'
+                y = int(3) # y will be 3
+                z = float(3) # z will be 3.0
+    Get the type:
+        To get the data type of a variable use the type() function.
+        Ex.:    x = 5
+                y = "John"
+                print(type(x))
+                print(type(y))
+            Explanation:
+                The data type of x is: <class 'int'>
+                The data type of y is: <class 'str'>
+    String variables can be declared using single or double quotes.
+        Ex.:    x = "John"
+                # is the same as
+                x = 'John'
+    Variable names are case-sensitive.
+
+Python Variable Names
+    Rules:
+        Must start with a letter or underscore character;
+        Cannot start with a number;
+        Can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ );
+        Variable names are case-sensitive (age, Age and AGE are three different variables).
+        Can't be Python Keywords.
+    Ex.: 
+        myvar = "John"
+        my_var = "John"
+        _my_var = "John"
+        myVar = "John"
+        MYVAR = "John"
+        myvar2 = "John"
+
+    Use mainly Snake Case.
+
+Many Values to Multiple Variables   
+    You can assign values to multiple variables in one line.
+    Ex.:
+        x, y, z = "Orange", "Banana", "Cherry"
+        print(x)
+        print(y)
+        print(z)
+    Obs.: The number of variables must match the number of values.
+
+One Value to Multiple Variables
+    You can assign the same value to multiple variables in one line.
+    Ex.:
+        x = y = z = "Orange"
+        print(x)
+        print(y)
+        print(z)
+
+Unpack a Collection
+    Python allows you to extract the values of a collection (list, tuple, ...) into variables. 
+    Ex.: Unpack a list
+        fruits = ["apple", "banana", "cherry"]
+        x, y, z = fruits
+        print(x)
+        print(y)
+        print(z)
+
+Output Variables
+    'print()' function:
+        Ex.: 
+            x = "Python is awesome"
+            print(x)
+        You output multiple variables, separated by a comma:
+            Ex.: 
+                x = "Python"
+                y = "is"
+                z = "awesome"
+                print(x,y,z)
+        If you try to combine a string and a number with the '+' operator, it will generate an error.
+            Ex.: 
+                x = 5
+                y = "John"
+                print(x + y)
+        To print multiple variables you separate them with comas, which support different data types.
+            Ex.: 
+                x = 5
+                y = "John"
+                print(x, y)
+                
+    '+' operator:
+        Multiple variables.
+        If the variables are numbers the operators works mathematicaly.
+        Ex.: 
+            x = "Python"
+            y = "is"
+            z = "awesome"
+            print(x + " " + y + " " + z)
+
+Global Variables
+    Variables created outside of a function.
+    Can be used by everyone, both inside and outside of functions.
+        Ex.: Create a variable outside a function, and use it inside the function.
+            x = "awesome"
+            def myfunc():
+                print("Python is " + x)
+            myfunc()
+    If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function.
+    The global variable with the same name will stay the same, global and with original value.
+        Ex.: Create a variable inside a function, with the same name as the global variable.
+            x = "awesome"
+            def myfunc():
+                x = "fantastic"
+                print("Python is " + x)
+            myfunc()
+            print("Python is " + x)    
+
+The Global Keyword
+    Usualy, variables created inside functions are local --> can only be used inside that function.
+    The 'global' keyword is used to create a global variable inside a function;
+    Ex.: 
+        def myfunc():
+            global x
+            x = "fantastic"
+        myfunc()
+        print("Python is " + x)
+
+     The 'global' keyword is also used to change a global variable inside a function.
+     Ex.: 
+        x = "awesome"
+        def myfunc():
+            global x
+            x = "fantastic"
+        myfunc()
+        print("Python is " + x)
+
+Python Data types 
+    Variables can store data of different types.
+    Python has the following data types built-in by default, in these categories:
+        Text Type:      str
+        Numeric Types:  int, float, complex
+        Sequence Types: list, tuple, range
+        Mapping Type:   dict
+        Set Types:      set, frozenset
+        Boolean Type:   bool
+        Binary Types:   bytes, bytearray, memoryview
+
+Getting the Data Type
+    'type()' function.
+    Ex.: 
+        x = 5
+        print(type(x))
+
+Setting the Data Type
+    Data type is set when you assign a value to a variable:
+    Ex.: 
+        x = "Hello World"	                # str
+        x = 20	                            # int
+        x = 20.5	                        # float
+        x = 1j	                            # complex
+        x = ["apple", "banana", "cherry"]	# list
+        x = ("apple", "banana", "cherry")	# tuple
+        x = range(6)	                    # range
+        x = {"name" : "John", "age" : 36}	# dict
+        x = {"apple", "banana", "cherry"}	# set
+        x = frozenset({"apple", "banana", "cherry"})	# frozenset
+        x = True	                        # bool
+        x = b"Hello"	                    # bytes
+        x = bytearray(5)	                # bytearray
+        x = memoryview(bytes(5))	        # memoryview
+        x = None                            # NoneType
+
+Setting the Specific Data Type
+    Ex.:
+        x = str ("Helllo World")                    # str
+        x = int (20)                                # int
+        x = float (20.5)                            # float
+        x = complex (1j)                            # complex
+        x = list (("apple", "banana", "cherry"))	# list
+        x = tuple (("apple", "banana", "cherry"))	# tuple
+        x = range (6)                               # range
+        x = dict (name="John", age=36)	            # dict
+        x = set (("apple", "banana", "cherry"))	    # set
+        x = frozenset (("apple", "banana", "cherry"))	# frozenset
+        x = bool (5)                                # bool
+        x = bytes (5)                               # bytes
+        x = bytearray (5)                           # bytearray
+        x = memoryview (bytes (5))                  # memoryview
+
+Python numbers
+    3 numeric types:
+        int
+        float
+        complex
+    Ex.:
+        x = 1	    # int
+        y = 2.8	    # float
+        z = 1j	    # complex
+
+Int
+    Whole number (positive or negative).
+    Without decimals of unlimited length.
+    Ex.:
+        x = 1
+        y = 35656222554887711
+        z = -3255522
+
+Float
+    Floating point number.
+    A number, positive or negative, containing one or more decimals.
+    Ex.:
+        x = 1.10
+        y = 1.0
+        z = -35.59
+    Scientific numbers (with "e") to indicate power of 10.
+    Ex.: 
+        x = 35e3
+        y = 12E4
+        z = -87.7e100
+
+
+
+
+
