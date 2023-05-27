@@ -1,0 +1,47 @@
+Machine Learning (ML) 
+Make the PC learn from studying data and statistics.
+Step into AI.
+ML is a program that analyses data and learns to predict the outcome.
+
+Data Set
+    Any collection of data.
+        Can be anything from an array to a complete database.
+    Ex. of an array:
+        [99,86,87,88,111,86,103,87,94,78,77,85,86]
+        Here we can guess that the average value is probably around 80 or 90; we are also able to determine the highest and lowest value.
+    Ex. of a database:
+        Carname     Color   Age     Speed   AutoPass
+        BMW         red     5       99      Y
+        Volvo       black   7       86      Y
+        VW          gray    8       87      N
+        VW          white   7       88      Y
+        Ford        white   2       111     Y
+        VW          gray    17      86      N
+        Tesla       red     2       103     Y
+        Toyota      white   4       87      N
+
+        Here we can see that the most popular color is white, and the oldest car is 17 years, but what if we could predict if a car had an AutoPass, just by looking at the other values?
+            ML does that, it analyses data and predicts the outcome. 
+
+Data Types
+    To analyse data we have to know what type of data we are dealing with.
+    Data is split into 3 main categories:
+        Numerical:
+            Numbers;
+            2 numerical categories:
+                Discrete Data - numbers that are limited to integers (Ex.: number of cars passing by);
+                Continuous Data - numbers that are of infinite value (Ex.: price of an item, height of a person, etc.).
+        Categorical:
+            Values that cannot be measured up against each other (Ex.: a color value, or any yes/no values).
+        Ordinal:
+            Like categorical data, but can be measured up against each other (Ex.: school grades where A is better than B and so on).
+    
+    Knowing the data type of your data source, you will be able to know what technique to use when analyzing them.
+
+Mean, Median and Mode
+    Mean - The average value;
+    Median - The mid point value;
+    Mode - The most common value.
+
+
+    
